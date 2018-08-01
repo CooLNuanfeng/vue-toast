@@ -7,8 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>msg(必须): 'toast 文案'</h1>
-    <h1>time(可选): toast 持续时间 默认 3000 单位 毫秒</h1>
-    <v-toast :msg="toast" :time="3000"></v-toast>
+    <script>
+        import Toast from './components/toast';
+        Vue.use(Toast);
+
+        this.toast('message',3000);
+    </script>
 </body>
 </html>

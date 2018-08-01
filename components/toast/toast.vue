@@ -8,36 +8,11 @@
 
 <script>
 export default {
-    name: 'Toast',
-    props: {
-        msg: {
-            type: String,
-            required: true
-        },
-        time: {
-            type: Number,
-            required: false,
-            default: 3000
-        }
-    },
+    name: 'toast',
     data(){
-        return {
-            show : false
-        }
-    },
-    watch : {
-        msg(newVal){
-            this.show = newVal ? true : false;
-            this.hide();
-        }
-    },
-    methods : {
-        hide(){
-            clearTimeout(timer);
-            var timer = setTimeout(()=>{
-                this.show = false;
-                clearTimeout(timer);
-            },this.time);
+        return{
+            show : false,
+            msg : ''
         }
     }
 }
